@@ -12,7 +12,6 @@ public class classRob {
             System.out.println("Оштбка!");
         }
 
-
         String school;
         school = switch (usersAge) {
             case 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18 ->
@@ -27,7 +26,6 @@ public class classRob {
         if (usersAge > 24) {
             System.out.println("Если возраст человека равен 24 или больше, то ему пора идти на работу.");
         }
-
 
         System.out.print("Введи номер месяца:  ");
         int monthNumber = cs.nextInt();
