@@ -6,24 +6,25 @@ public class classRob {
         System.out.print("Введи свой возраст: ");
         int usersAge = cs.nextInt();
 
-        if (usersAge>=2 && usersAge<=6){
+        if (usersAge >= 2 && usersAge <= 6) {
             System.out.println("Детский сад");
-        } else if (usersAge>=0 && usersAge<=1) {
+        } else if (usersAge >= 0 && usersAge <= 1) {
             System.out.println("Оштбка!");
         }
 
 
         String school;
-        school = switch (usersAge){
-            case 7,8,9,10,11,12,13,14,15,16,17,18 -> "Если возраст человека равен от 7 до 18, то ему нужно посещать школу.";
+        school = switch (usersAge) {
+            case 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18 ->
+                    "Если возраст человека равен от 7 до 18, то ему нужно посещать школу.";
             default -> "";
         };
         System.out.println(school);
 
-        if (usersAge>=19 && usersAge<=24){
+        if (usersAge >= 19 && usersAge <= 24) {
             System.out.println("Если возраст человека старше 18 но мнладше 24, то ему нужно учиться в университете.");
         }
-        if (usersAge > 24){
+        if (usersAge > 24) {
             System.out.println("Если возраст человека равен 24 или больше, то ему пора идти на работу.");
         }
 
@@ -31,11 +32,11 @@ public class classRob {
         System.out.print("Введи номер месяца:  ");
         int monthNumber = cs.nextInt();
         String namesMonth;
-        namesMonth = switch (monthNumber){
-            case 1,2,12 -> "Принадлежит к сезону зима";
-            case 3,4,5 -> "Принадлежит к сезону весна";
-            case 6,7,8 -> "Принадлежит к сезону лето";
-            case 9,10,11 -> "Принадлежит к сезону осени";
+        namesMonth = switch (monthNumber) {
+            case 1, 2, 12 -> "Принадлежит к сезону зима";
+            case 3, 4, 5 -> "Принадлежит к сезону весна";
+            case 6, 7, 8 -> "Принадлежит к сезону лето";
+            case 9, 10, 11 -> "Принадлежит к сезону осени";
             default -> "";
         };
         System.out.println(namesMonth);
