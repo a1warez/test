@@ -7,29 +7,42 @@ public class TRXT {
 
     static void task1() {
 
-        String text = "He11o Wor1d!";
+        String text = "He11o 2or1d!";
 
         int lowerCase = 0;
         int upperCase = 0;
         int countDigit = 0;
+        int diaPazone = 0;
 
-        for (int i = 0; i < text.length(); i++) {
+        for (int i = 0; i < 5; i++){
             if (Character.isLowerCase(text.charAt(i))) {
                 ++lowerCase;
             }
-            if (Character.isUpperCase(text.charAt(i))){
+            if (Character.isUpperCase(text.charAt(i))) {
                 ++upperCase;
             }
             if (Character.isDigit(text.charAt(i))) {
                 ++countDigit;
             }
-
-
         }
+        for (int j = 5; j < 10; j++){
+            if (Character.isLowerCase(text.charAt(j))) {
+                ++lowerCase;
+            }
+            if (Character.isUpperCase(text.charAt(j))) {
+                ++upperCase;
+            }
+            if (Character.isDigit(text.charAt(j))) {
+                ++diaPazone;
+            }
+        }
+
+
         System.out.println("Кол во маленьких букв " + lowerCase);
         System.out.println("Кол во больших букв " + upperCase);
 
-        System.out.println("Кол во цифр " + countDigit);
+        System.out.println("Числа в диапазоне от 0 до 4: "  + countDigit);
+        System.out.println("Числа в диапазоне от 5 до 9: " + diaPazone);
 
     }
 
