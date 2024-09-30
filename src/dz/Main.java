@@ -1,59 +1,80 @@
 package dz;
 
-import java.util.Scanner;
+import java.util.Arrays;
 
 public class Main {
     public static void main(String[] args) {
         task1();
         task2();
         task3();
-
+        task4();
+        task5();
     }
 
     static void task1() {
-        //         Задача 1. Вывод чётных чисел от 1 до n
-        //        Условие: Напишите программу, которая выводит все НЕчётные числа от 1 до заданного числа n.
-        //        Пример: Для n = 10 программа должна вывести: 1 3 5 7 9
-        int n = 20;
-        for (int i = 0; i <= n; i++) {
-            if (i == 0) {
-                continue;
-            }
-            if (i % 2 != 0) {
-                System.out.print(" " + i);
-            }
+        int[] num = {15, 2, 35, 40, 57};
+
+        int sum = 0;
+        for (int i = 0; i < num.length; i++) {
+            sum += num[i];
+
         }
+        int average = sum / num.length;
+
+        System.out.println("Среднее арефметическое значение: " + average);
     }
 
     static void task2() {
-        //        Задача 2. Произведение чисел от 1 до n
-        //        Условие: Напишите программу, которая вычисляет произведение всех чисел от 1 до заданного числа n
-        //        Пример: Для n = 4, результат будет 1 * 2 * 3 * 4 = 24.
-        int n = 4;
-        int composition = 0;
-        Integer j;
-        for (int i = 1; i <= n; i++) {
-            j = composition * i;
-            composition += i;
-            System.out.println(j);
-        }
+        double[] numbers = {5.2, 13.2, 2.6, 9.8, -3.2};
+        double min = numbers[0];
+        double max = numbers[0];
 
+        for (int i = 1; i < numbers.length; i++) {
+            if (numbers[i] < min) {
+                min = numbers[i];
+            }
+            if (numbers[i] > max) {
+                max = numbers[i];
+            }
+
+        }
+        System.out.println("Макимальнон значение: " + max);
+        System.out.println("Минимальное значение:" + min);
     }
 
     static void task3() {
-        //        Задача 3. Таблица умножения
-        //        Условие: Напишите программу, которая выводит таблицу умножения от 1 до 10 (1 * 1, 1* 2 и т.д. до 10 * 10)
-        //        Использовать вложенные циклы for.
-        Scanner cs = new Scanner(System.in);
-        System.out.print("На что умножим? (1,2,3,4,5,6,7,8,9,10): ");
-        int number1 = cs.nextInt();
+        char[] chars = {'a', 'B', 'i', 'E', 'r', 't', 'o', 'U'};
 
-        for (int i = 1; i < 11; i++) {
-            int num = i * number1;
-            System.out.println(num);
+        char[] vowels = {'A', 'a', 'E', 'e', 'I', 'i', 'O', 'o', 'U', 'u'};
 
-
+        int sum = 0;
+        for (int i = 0; i < chars.length; i++) {
+            for (int j = 0; j < vowels.length; j++) {
+                if (chars[i] == vowels[j]) {
+                    sum++;
+                }
+            }
         }
+        System.out.println("Количество гласных букв: " + sum);
+
+    }
+
+    static void task4() {
+        String str = "Hello World This Is Java";
+        char[] charstr = new char[str.length()];
+        for (int i = 0; i < str.length(); i++) {
+            charstr[i] = str.charAt(i);
+            if (charstr[i] == ' ') {
+                charstr[i] = '_';
+            }
+        }
+        System.out.println(charstr);
+    }
+
+    static void task5() {
+        String str = "apple,banana,grep,orange";
+        String[] strings = str.split("[,\\s]+");
+        System.out.println(Arrays.toString(strings));
 
     }
 }
