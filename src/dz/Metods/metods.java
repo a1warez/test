@@ -2,7 +2,7 @@ package dz.Metods;
 
 public class metods {
     /**
-     * Находит квадрат числа
+     * Возращает квадрат числа
      *
      * @param num число
      * @return число в квадрате
@@ -29,9 +29,10 @@ public class metods {
      * @return самая длинная и короткая строка
      */
     static String[] cornerValuesArray(String... str) {
-
+        if (str.length == 0){
+            return new String[]{null,null};
+        }
         String[] string = new String[2];
-
         String longest = str[0];
         String shorts = str[0];
 
@@ -56,6 +57,9 @@ public class metods {
      * @return максимальное и минимальное значение
      */
     static int[] cornerValuesArray(int... num) {
+        if (num.length == 0){
+            return new int[]{0,0};
+        }
         int[] nums = new int[2];
         int max = num[0];
         int min = num[0];
@@ -81,6 +85,9 @@ public class metods {
      * @return самый маленький и самый большой символ
      */
     static char[] cornerValuesArray(char... chars) {
+        if (chars.length == 0){
+            return new char[]{'0','0'};
+        }
         char[] charrrs = new char[2];
         char max = chars[0];
         char min = chars[0];
@@ -97,6 +104,18 @@ public class metods {
         charrrs[1] = numMin;
 
         return charrrs;
+    }
+    static int factorial(int num){
+        if (num == 1){
+            return 1;
+        }else {
+            return num * factorial(num - 1);
+        }
+    }
+    static int all(int sum){
+        System.out.println(sum);
+        all(sum + 1);
+        return sum;
     }
 
 }
